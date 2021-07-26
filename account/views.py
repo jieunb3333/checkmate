@@ -41,12 +41,12 @@ def change_password(request):
         current_password = request.POST.get('user_password')
         user = request.user
         if check_password(current_password,user.password):
-            new_password = request.POST.get('passord1')
-            new_password_check = request.POST.get('passord2')
+            new_password = request.POST.get('password1')
+            new_password_check = request.POST.get('password2')
             if new_password == new_password_check :
                 user.set_password(new_password)
                 user.save()
-                auth.login(request,user)
+                login(request,user)
                 return redirect('main')
             else:
                 context.update({'error' : "새로입력한 비밀번호가 일치하지 않습니다."})
