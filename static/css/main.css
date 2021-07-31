@@ -603,7 +603,7 @@ input:-webkit-autofill {
     font-weight: 60;
     font-size: 15px;
     line-height: 18px;
-    text-align: center;
+    text-align: center; 
     color: #254074;
     border: 1px solid #254074;
     box-sizing: border-box;
